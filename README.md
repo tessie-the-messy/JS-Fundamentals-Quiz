@@ -1,2 +1,2 @@
 # JS-Fundamentals-Quiz
-A quiz created to test knowledge of JS fundamentals
+Test your knowledge of JavaScript Fundamentals!
