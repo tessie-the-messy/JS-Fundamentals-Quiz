@@ -13,6 +13,7 @@
     <!-- Header at top that stays throughout the whole Quiz -->
     <header>
         <h1>JavaScript Fundamentals Quiz</h1>
+        <hr />
         <span id = "timer"></span>
     </header>
     <main>
@@ -20,6 +21,15 @@
         <h2>Test your JavaScript Knowledge!</h2>
             <p>Do you have what it takes to become a JS master? It may be too soon to tell, but everyone's gotta start somewhere. Take this JavaScript quiz to see if you've got the fundamentals down, and see where you rank among other test-takers!</p>
             <button class="start">Start</button>
+       </section>
+       <section class="question-el" style = "display: none;">
+        <h2 id = "question">This is the question</h2>
+            <ul>
+                <li><button id = "ans1">a</button></li>
+                <li><button id = "ans2">as</button></li>
+                <li><button id= "ans3">fda</button></li>
+                <li><button id= "ans4">asf</button></li>
+            </ul>
        </section>
     </main>
     <script src="./assets/js/script.js"></script>
