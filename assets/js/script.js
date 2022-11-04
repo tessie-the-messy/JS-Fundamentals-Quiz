@@ -59,10 +59,10 @@ start.addEventListener("click", function(){
 function countdown() {
     setInterval(function () {
         if (timeLeft > 0) {
-            timer.textContent = timeLeft;
+            timer.textContent = "timer: " + timeLeft;
             timeLeft--;
         } else {
-            timer.textContent = 0;
+            timer.textContent = "timer: "+ 0;
         }
     }, 1000);
 }
@@ -75,7 +75,7 @@ function quiz(){
     ans3.textContent = questions[qIndex].choices[2];
     ans4.textContent = questions[qIndex].choices[3];
     if (qIndex == questions.length-1) {
-        return;
+        score();
     } else {
         qIndex++;
     }}
@@ -117,10 +117,15 @@ ans4.addEventListener("click", function(e) {
 })
 
 //Your score(amount of time left) & enter initials form
-
+function score() { if(timeLeft === 0) {
+    entScore.style = "display: true";
+} else if (qIndex == questions.length-1) {
+    entScore.style = "display: true";
+}}
 
 // End screen with leaderboard and play again button
 // playAgain.addEventListener("click", window.reload())
+
 window.addEventListener("load", function(){
     playAgain.onclick = function() {
         location.reload(true);

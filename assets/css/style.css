@@ -1,11 +1,73 @@
 html {
     font-family: 'Eagle Lake', cursive;
+    background-color: #f3e3d3;
 }
 header {
-    color: green;
     text-align: center;
+    font-size:x-large;
+}
+
+h1 {
+    color: #744c24;
+    margin:0px;
+}
+
+#timer {
+    display: flex;
+    align-items: flex-end;
+    font-size: 20px;
+    color: #744c24;
 }
 
 .open-page {
     text-align: center;
+    color: #b34d34;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.start {
+    font-family: 'Eagle Lake', cursive;
+    font-size: 16px;
+    border: 2px solid #744c24;
+    border-radius: 10px;
+    background-color: #c98860;
+    color: #744c24;
+    font-size: 16px;
+}
+
+.start:hover {
+    cursor: pointer;
+    background-color: #efcead;
+}
+
+#question {
+    text-align: center;
+    color: #b34d34;
+}
+
+ul {
+    list-style: none;
+    text-align: center;
+}
+
+li > button {
+    font-family: 'Eagle Lake', cursive;
+    font-size: 24px;
+    margin: 5px;
+    border: 2px solid #744c24;
+    border-radius: 10px;
+    background-color: #c98860;
+    color: #744c24;
+}
+
+li > button:hover {
+    cursor: pointer;
+    background-color: #efcead;
 }
