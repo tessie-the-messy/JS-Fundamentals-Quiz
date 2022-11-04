@@ -1,15 +1,13 @@
-// declare variables
+// global variables
 var start = document.querySelector(".start");
 var timer = document.getElementById("timer");
 var timeLeft = 120;
-
-var qIndex = 0
-var questionEl = document.querySelector("#question")
-var ans1 = document.querySelector("#ans1")
-var ans2 = document.querySelector("#ans2")
-var ans3 = document.querySelector("#ans3")
-var ans4 = document.querySelector("#ans4")
-
+var qIndex = 0;
+var questionEl = document.querySelector("#question");
+var ans1 = document.querySelector("#ans1");
+var ans2 = document.querySelector("#ans2");
+var ans3 = document.querySelector("#ans3");
+var ans4 = document.querySelector("#ans4");
 var questions = [{
     // first question
     title: "This is question 1",
@@ -31,24 +29,29 @@ var questions = [{
     // fifth question
 ];
 
-
-
-
-
-// Should this go below var question ?
+// Start button
 start.addEventListener("click", function(){
-    console.log(start);
-    var questionArea = document.querySelector(".question-el");
+    var questionArea = document.querySelector(".question-area");
     questionArea.style = "display: block;";
     var instructions = document.querySelector(".open-page");
     instructions.style = "display: none;";
-    // Upon pressing start button, first question appears --- is everything that follows inside one giant function?
-    //timer - needs to start when user presses start
     quiz();
-    countdown()
+    countdown();
 });
 
+// timer
+function countdown() {
+    setInterval(function () {
+        if (timeLeft > 0) {
+            timer.textContent = timeLeft;
+            timeLeft--;
+        } else {
+            timer.textContent = 0;
+        }
+    }, 1000);
+}
 
+// Quiz cycle
 function quiz(){
     questionEl.textContent = questions[qIndex].title
     ans1.textContent = questions[qIndex].choices[0];
@@ -59,10 +62,9 @@ function quiz(){
         return;
     } else {
         qIndex++;
-    }
-// Upon pressing a choice for a question, it will return whether user is correct or not
-}
+    }}
 
+// Subtract 10 sec if wrong answer is chosen
 function checkAns(){
     if (this.textContent!==questions[qIndex].answer) {
         timeLeft
@@ -98,18 +100,11 @@ ans4.addEventListener("click", function(e) {
     quiz()
 })
 
-// timer var at line 3
-function countdown() {
-    setInterval(function () {
-        if (timeLeft > 0) {
-            timer.textContent = timeLeft;
-            // console.log(timeLeft)
-            timeLeft--;
-        } else {
-            timer.textContent = 0;
-        }
-    }, 1000);
-}
-// time being subtracted when user gets answer wrong
-//If timeLeft = 0 then it sends user to "you lose" screen
+//Your score + enter initials
+
+
 // End screen with score and post your results form, score = amount of time left
+
+//Local storage
+
+// function {
