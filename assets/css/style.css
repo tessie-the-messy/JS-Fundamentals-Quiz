@@ -1,7 +1,9 @@
+html {
+    font-family: 'Eagle Lake', cursive;
+}
 header {
     color: green;
     text-align: center;
-    
 }
 
 .open-page {

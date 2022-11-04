@@ -8,6 +8,9 @@ var ans1 = document.querySelector("#ans1");
 var ans2 = document.querySelector("#ans2");
 var ans3 = document.querySelector("#ans3");
 var ans4 = document.querySelector("#ans4");
+var entScore = document.querySelector(".ent-score")
+var leader = document.querySelector(".leader-board")
+var playAgain = document.querySelector(".refresh")
 var questions = [{
     // first question
     title: "This is question 1",
@@ -28,6 +31,13 @@ var questions = [{
 
     // fifth question
 ];
+var leadBoard = [
+
+]
+
+//hiding score form and score board
+entScore.style = "display: none;";
+leader.style = "display: none;";
 
 // Start button
 start.addEventListener("click", function(){
@@ -100,11 +110,13 @@ ans4.addEventListener("click", function(e) {
     quiz()
 })
 
-//Your score + enter initials
+//Your score(amount of time left) & enter initials form
 
 
-// End screen with score and post your results form, score = amount of time left
-
-//Local storage
-
-// function {
+// End screen with leaderboard and play again button
+// playAgain.addEventListener("click", window.reload())
+window.addEventListener("load", function(){
+    playAgain.onclick = function() {
+        location.reload(true);
+    }
+});
