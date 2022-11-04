@@ -13,23 +13,29 @@ var leader = document.querySelector(".leader-board")
 var playAgain = document.querySelector(".refresh")
 var questions = [{
     // first question
-    title: "This is question 1",
-    choices: ["a", "b", "c", "d"],
-    answer: "a",},
+    title: "Finish the quote: To __, or not to __: that is the question",
+    choices: ["Aye", "Be", "See", "Deee"],
+    answer: "Be",},
 
     // second question
-   { title: "This is question 2",
-    choices: ["a1","b1", "c1", "d1"],
-    answer: "c1"},
+   { title: "Finish the quote:___,___! Wherefore art thou ___?",
+    choices: ["l'il Romeo","Chad", "Romeo", "Homie"],
+    answer: "Romeo"},
 
     // third question
-    {title: "This is question 3",
-    choices: ["a2","b2", "c2", "d2"],
-    answer: "c2"},
+    {title: "Finish the quote: Is this a ___ which I see before me, the handle toward my hand?",
+    choices: ["dagger","needle", "cutlass", "backpack"],
+    answer: "dagger"},
 
     // fourth question
+    {title: "Finish the quote: Get thee to a ___.",
+    choices: ["grocery store","medic", "nunnery", "tavern"],
+    answer: "nunnery"},
 
     // fifth question
+    {title: "Finish the quote: What light through yonder __ breaks.",
+    choices: ["iPhone","heaven", "shadow", "window"],
+    answer: "window"},
 ];
 var leadBoard = [
 
